@@ -36,13 +36,6 @@ user=root
 passwd=123456
 ```
 
-## How to run with docker
-
-- start jira
-
-```
-docker volume create jira_home_data && docker network create jira-network && docker run -p 8080:8080 -v jira_home_data:/var/jira --network jira-network --name jira-srv -e TZ='Asia/Shanghai' vega/jira:10.4.0
-```
 
 - config your own db:
 
@@ -59,38 +52,7 @@ docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
     -s you-server-id-xxxx
 ```
 
-## How to hack jira plugin
 
-- .eg I want to use BigGantt plugin
-1. Install BigGantt from jira marketplace.
-2. Find `App Key` of BigGantt is : `eu.softwareplant.biggantt`
-3. Execute :
-
-```
-docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
-    -d \
-    -p eu.softwareplant.biggantt \
-    -m vega@vega.com.vn \
-    -n vega@vega.com.vn \
-    -o Vega \
-    -s you-server-id-xxxx
-```
-
-4. Paste your license
-
-
-## Hack Jira Service Management(jsm) Plugin
-
-
-```
-docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
-    -d \
-    -p jsm \
-    -m vega@vega.com.vn \
-    -n vega@vega.com.vn \
-    -o Vega \
-    -s you-server-id
-```
 
 Video Guide:
 
