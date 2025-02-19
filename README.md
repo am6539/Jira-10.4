@@ -1,16 +1,4 @@
-[![docker pulls](https://img.shields.io/docker/pulls/haxqer/jira.svg)](https://hub.docker.com/r/haxqer/jira/)  [![docker stars](https://img.shields.io/docker/stars/haxqer/jira.svg)](https://hub.docker.com/r/haxqer/jira/) [![image metadata](https://images.microbadger.com/badges/image/haxqer/jira.svg)](https://microbadger.com/images/haxqer/jira "haxqer/jira image metadata")
-
-# jira
-
-[README](README.md) | [中文文档](README_zh.md)
-
-
-+ Long Term Support Version(arm64&amd64): v9.12.18
-+ Latest Version(arm64&amd64): v9.17.5
 + Beta Version(arm64&amd64): v10.4.0
-+ [The new way](https://github.com/haxqer/jira/tree/build-your-own) of use allows you to conveniently upgrade and modify parameters on your own, and it offers convenient support for HTTPS (thanks to [xsharp](https://github.com/xsharp)).
-
-New Confluence/Jira releases support only Data Center licenses. To generate a Data Center licenses, add the `-d` parameter.
 
 default port: `8080`
 
@@ -29,7 +17,7 @@ Video Guide:
 - start jira & mysql
 
 ```
-git clone https://github.com/haxqer/jira.git \
+git clone https://github.com/am6539/Jira-10.4.git \
     && cd jira \
     && git checkout rm \
     && docker-compose pull \
@@ -58,7 +46,7 @@ passwd=123456
 - start jira
 
 ```
-docker volume create jira_home_data && docker network create jira-network && docker run -p 8080:8080 -v jira_home_data:/var/jira --network jira-network --name jira-srv -e TZ='Asia/Shanghai' haxqer/jira:9.17.5
+docker volume create jira_home_data && docker network create jira-network && docker run -p 8080:8080 -v jira_home_data:/var/jira --network jira-network --name jira-srv -e TZ='Asia/Shanghai' vega/jira:10.4.0
 ```
 
 - config your own db:
@@ -98,8 +86,6 @@ docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
 
 ## Hack Jira Service Management(jsm) Plugin
 
-Thanks to:
-+ [d1m0nstr](https://github.com/d1m0nstr) for [Jira Service Management](https://github.com/haxqer/jira/issues/11)
 
 ```
 docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
