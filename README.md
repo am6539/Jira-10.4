@@ -3,11 +3,6 @@
 default port: `8080`
 
 
-Video Guide:
-
-
-[![Jira Complete Installation Guide](https://img.youtube.com/vi/en-h7m2Xv5I/0.jpg)](https://www.youtube.com/watch?v=en-h7m2Xv5I "Jira Complete Installation Guide")
-
 ## requirement
 - docker: 17.09.0+
 - docker-compose: 1.24.0+
@@ -75,9 +70,9 @@ docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
 docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
     -d \
     -p eu.softwareplant.biggantt \
-    -m Hello@world.com \
-    -n Hello@world.com \
-    -o your-org \
+    -m vega@vega.com.vn \
+    -n vega@vega.com.vn \
+    -o Vega \
     -s you-server-id-xxxx
 ```
 
@@ -91,9 +86,13 @@ docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
 docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
     -d \
     -p jsm \
-    -m Hello@world.com \
-    -n Hello@world.com \
-    -o your-org/ \
+    -m vega@vega.com.vn \
+    -n vega@vega.com.vn \
+    -o Vega \
     -s you-server-id
 ```
 
+Video Guide:
+
+
+[![Jira Complete Installation Guide](https://img.youtube.com/vi/en-h7m2Xv5I/0.jpg)](https://www.youtube.com/watch?v=en-h7m2Xv5I "Jira Complete Installation Guide")
