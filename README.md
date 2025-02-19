@@ -46,9 +46,9 @@ passwd=123456
 docker exec jira-srv java -jar /var/agent/atlassian-agent.jar \
     -d \
     -p jira \
-    -m Vega@vega.com.vn \
-    -n Vega@vega.com.vn \
-    -o Vega \
+    -m hello@hellomoto.com.vn \
+    -n hello@hellomoto.com.vn \
+    -o hello \
     -s you-server-id-xxxx
 ```
 
