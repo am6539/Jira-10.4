@@ -1,6 +1,6 @@
 FROM openjdk:17-bullseye
 
-LABEL maintainer="vega <vega@vega.com.vn>" version="10.4.0"
+LABEL maintainer="hello <hello@hellomoto.com.vn>" version="10.4.0"
 
 ARG JIRA_VERSION=10.4.0
 # Production: jira-software jira-core
